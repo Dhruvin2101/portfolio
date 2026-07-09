@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { IconCommand } from "@tabler/icons-react";
 import "./App.css";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
@@ -56,7 +55,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="max-w-xs w-full md:max-w-md lg:max-w-3xl mx-auto font-giest flex justify-between items-center mb-4 selection:bg-accent">
+    <div className="max-w-xs w-full md:max-w-md lg:max-w-3xl mx-auto font-giest flex justify-between items-center mb-4 selection:bg-accent selection:text-white">
       <h1 className="font-bold text-neutral-800 text-base  md:text-lg">
         Dhruvin.
       </h1>
@@ -72,7 +71,9 @@ const Navbar = () => {
         ))}
       </div>
       <div className="flex gap-3 items-center min-w-27 text-accent font-timer timer-variation font-[font-weight:600] md:text-md">
-        <p className="selection:bg-neutral-300">{formattedTime}</p>
+        <p className="selection:bg-accent selection:text-white">
+          {formattedTime}
+        </p>
         <p>
           <HugeiconsIcon
             icon={CommandIcon}

@@ -12,6 +12,7 @@
   --color-subheading: oklch(26.9% 0 0);
   --color-body: oklch(55.6% 0 0);
   --text-phone: 1 rem;
+  --text-phone-small: 0.9rem;
 }
 
 @layer utilities {
