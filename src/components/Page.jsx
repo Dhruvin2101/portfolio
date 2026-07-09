@@ -47,6 +47,7 @@ const Page = () => {
       href: "#",
       target: "_self",
       rel: "noopener noreferrer",
+      id: 1,
     },
     {
       title: (
@@ -55,12 +56,14 @@ const Page = () => {
       href: "https://x.com/Dhruvin_patel_7",
       target: "_blank",
       rel: "noopener noreferrer",
+      id: 2,
     },
     {
       title: <HugeiconsIcon icon={GithubIcon} className="h-[20px] w-[20px]" />,
       href: "https://github.com/Dhruvin2101",
       target: "_blank",
       rel: "noopener noreferrer",
+      id: 3,
     },
     {
       title: (
@@ -69,12 +72,14 @@ const Page = () => {
       href: "https://www.linkedin.com/in/dhruvin-patel-08a1a3244/",
       target: "_blank",
       rel: "noopener noreferrer",
+      id: 4,
     },
     {
       title: <HugeiconsIcon icon={Mail01Icon} className="h-[20px] w-[20px] " />,
       href: "mailto:dhruvinpatel746@gmail.com",
       target: "_blank",
       rel: "noopener noreferrer",
+      id: 5,
     },
   ];
 
@@ -119,7 +124,7 @@ const Page = () => {
             {links.map((items) => (
               <a
                 href={items.href}
-                key={items.title}
+                key={items.id}
                 target={items.target}
                 rel={items.rel}
                 className="border border-neutral-300 rounded-lg p-[5px] shadow-xs text-neutral-500 hover:text-neutral-700 transition-all ease-in-out delay-70"
@@ -131,17 +136,24 @@ const Page = () => {
         </div>
         {/* -------------------------------------------------------- */}
       </div>
-      <h1 className="tracking-tight text-phone md:text-[1rem] text-body mx-6 md:mx-8 ">
-        A 20-year-old full-stack developer from India who enjoys building
-        <span className="bg-accent text-white border border-transparent rounded-sm px-[2px] mx-[2px]">
-          fast, scalable, and thoughtfully designed
+      <h1 className="tracking-tight text-phone md:text-[1rem] text-body mx-6 md:mx-8 selection:bg-accent selection:text-white">
+        A 20-year-old{" "}
+        <span className="bg-accent text-white border border-transparent rounded-sm px-0.5  mx-0.5">
+          full-stack developer
         </span>{" "}
-        web applications. I have experience developing real-world projects with
-        modern technologies and a growing interest in AI, developer tools, and
-        product engineering. I'm constantly learning, experimenting, and
-        building projects that combine great user experience with solid
-        engineering.
+        from India who enjoys building fast, scalable, and thoughtfully designed
+        web applications. I enjoy building real-world projects with modern
+        technologies and a growing interest in{" "}
+        <span className="bg-accent text-white border-2 border-accent rounded-sm  px-0.5 mx-0.5">
+          AI, developer tools, and product
+        </span>{" "}
+        engineering. I'm constantly learning, experimenting, and building
+        projects that combine great user experience with solid engineering.
       </h1>
+      {/* -------------------------------------------------------- */}
+      <div className="my-4 mx-4 md:mx-6 md:my-6 p-2 md:p-3 border border-neutral-200 rounded-xl">
+        <h1 className="text-heading font-semibold px-3 mx-4">Projects</h1>
+      </div>
     </div>
   );
 };
