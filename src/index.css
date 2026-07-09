@@ -7,6 +7,11 @@
   --font-geist: "Geist", sans-serif;
   --font-timer: "Bitcount Prop Single", sans-serif;
   --color-accent: #b65e3c;
+  --color-name: oklch(20.5% 0 0);
+  --color-heading: oklch(20.5% 0 0);
+  --color-subheading: oklch(26.9% 0 0);
+  --color-body: oklch(55.6% 0 0);
+  --text-phone: 1 rem;
 }
 
 @layer utilities {

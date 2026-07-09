@@ -71,7 +71,7 @@ const Navbar = () => {
           </a>
         ))}
       </div>
-      <div className="flex gap-3 items-center min-w-[100px] text-accent font-timer timer-variation font-[font-weight:600] md:text-md">
+      <div className="flex gap-3 items-center min-w-27 text-accent font-timer timer-variation font-[font-weight:600] md:text-md">
         <p className="selection:bg-neutral-300">{formattedTime}</p>
         <p>
           <HugeiconsIcon
