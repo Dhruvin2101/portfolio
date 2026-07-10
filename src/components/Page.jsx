@@ -8,9 +8,10 @@ import {
   Mail01Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import Card from "./Card";
 
+const words = ["Full Stack Developer", "Illustrator", "Open to Work"];
 const Page = () => {
-  const words = ["Full Stack Developer", "Freelancer", "Activer Learner"];
   const [i, setI] = useState(0);
   const [j, setJ] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -112,14 +113,18 @@ const Page = () => {
           </h1>
         </div>
         {/* -------------------------------------------------------- */}
-        <h1 className="text-phone text-neutral-600 h-10 md:h-auto mt-4 selection:bg-accent selection:text-white">
+        <h5 className="text-phone text-neutral-600 h-10 md:h-auto mt-4 selection:bg-accent selection:text-white">
           21, he/him || {text} from India
-        </h1>
+        </h5>
         {/* -------------------------------------------------------- */}
         <div className="mt-3 flex items-center gap-2 md:gap-4 mb-2">
-          <button className="text-phone-small md:text-normal cursor-pointer py-1 px-2 md:py-1 md:px-3  selection:bg-accent selection:text-white bg-neutral-800 text-white rounded-lg">
+          <a
+            className="text-phone-small md:text-normal cursor-pointer py-1 px-2 md:py-1 md:px-3  selection:bg-accent selection:text-white bg-neutral-800 text-white rounded-lg"
+            href="https://drive.google.com/file/d/1qszk97M-95b0C6a5gsNKr8fcIBbDriXh/view?usp=drive_link"
+            target="_blank"
+          >
             Resume
-          </button>
+          </a>
           <div className="flex items-center gap-2 md:gap-4">
             {links.map((items) => (
               <a
@@ -134,10 +139,11 @@ const Page = () => {
             ))}
           </div>
         </div>
-        {/* -------------------------------------------------------- */}
       </div>
-      <h1 className="tracking-tight text-phone md:text-[1rem] text-body mx-6 md:mx-8 selection:bg-accent selection:text-white">
-        A 20-year-old{" "}
+      {/* -------------------------------------------------------- */}
+
+      <p className="tracking-tight mt-4 md:mt-2 text-phone md:text-[1rem] text-body mx-6 md:mx-8 selection:bg-accent selection:text-white">
+        A 21-year-old{" "}
         <span className="bg-accent text-white border border-transparent rounded-sm px-0.5  mx-0.5">
           full-stack developer
         </span>{" "}
@@ -149,10 +155,32 @@ const Page = () => {
         </span>{" "}
         engineering. I'm constantly learning, experimenting, and building
         projects that combine great user experience with solid engineering.
-      </h1>
+      </p>
       {/* -------------------------------------------------------- */}
-      <div className="my-4 mx-4 md:mx-6 md:my-6 p-2 md:p-3 border border-neutral-200 rounded-xl">
-        <h1 className="text-heading font-semibold px-3 mx-4">Projects</h1>
+      {/* -------------------------------------------------------- */}
+      <div className="my-4 mx-4 md:mx-6 md:mt-6 p-2 md:p-3 border border-neutral-200 rounded-xl">
+        <h4 className="text-[1.1rem] text-heading md:text-xl font-semibold pt-2 md:px-3 mx-4">
+          Projects.
+        </h4>
+        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-2xl p-2.5 md:p-4 ">
+          <Card
+            projectTitle="My Tube"
+            projectDesc="MyTube is a backend-only REST API modelled on YouTube's core features. It handles user registration and login with bcrypt + JWT, video and thumbnail uploads to Cloudinary through Multer"
+            livePreview="#"
+            githubRep="https://github.com/Dhruvin2101/MyTube"
+            techStack={["JavaScript", "Node.js", "MongoDB", "Express", "JWT"]}
+            banner="/Card-1.svg"
+          />
+        </div>
+        <div className="border border-neutral-300 mt-3 mb-4 mx-4 md:mx-7 rounded-2xl p-2.5 md:p-4">
+          <Card
+            projectTitle="My Tube"
+            projectDesc="MyTube is a backend-only REST API modelled on YouTube's core features. It handles user registration and login with bcrypt + JWT, video and thumbnail uploads to Cloudinary through Multer"
+            livePreview="#"
+            githubRep="https://github.com/Dhruvin2101/MyTube"
+            techStack={["JavaScript", "Node.js", "MongoDB", "Express", "JWT"]}
+          />
+        </div>
       </div>
     </div>
   );

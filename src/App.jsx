@@ -27,7 +27,7 @@ const links = [
 function App({ children }) {
   return (
     <>
-      <div className="w-full font-giest py-7 h-screen bg-neutral-50 absolute inset-0  bg-[radial-gradient(circle,#ccc8be_1px,transparent_1px)] bg-[length:22px_22px]">
+      <div className="w-full font-giest py-7 min-h-80 bg-neutral-50 min-h-screen  bg-[radial-gradient(circle,#ccc8be_1px,transparent_1px)] bg-[length:22px_22px]">
         <Navbar />
         {children}
         <BottomDeck />
@@ -40,11 +40,8 @@ const Navbar = () => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    setInterval(() => {
-      const timer = setTime(new Date());
-
-      return () => clearInterval(timer);
-    }, 1000);
+    const timer = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timer);
   }, []);
 
   const formattedTime = time.toLocaleTimeString([], {
@@ -55,10 +52,10 @@ const Navbar = () => {
   });
 
   return (
-    <div className="max-w-xs w-full md:max-w-md lg:max-w-3xl mx-auto font-giest flex justify-between items-center mb-4 selection:bg-accent selection:text-white">
-      <h1 className="font-bold text-neutral-800 text-base  md:text-lg">
+    <div className="max-w-xs w-full  md:max-w-md lg:max-w-3xl mx-auto font-giest flex justify-between items-center mb-4 selection:bg-accent selection:text-white">
+      <p className="font-bold text-neutral-800 text-base  md:text-lg">
         Dhruvin.
-      </h1>
+      </p>
       <div className="flex justify-between align-center gap-2 md:gap-4 font-normal text-neutral-500">
         {links.map((items, index) => (
           <a
@@ -115,7 +112,7 @@ const BottomDeck = () => {
     },
     {
       title: <HugeiconsIcon icon={Mail01Icon} />,
-      href: "https://mailto:dhruvinpatel746@gmail.com",
+      href: "mailto:dhruvinpatel746@gmail.com",
       target: "_blank",
       rel: "noopener noreferrer",
     },
