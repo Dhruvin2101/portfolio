@@ -91,30 +91,35 @@ const BottomDeck = () => {
       href: "#",
       target: "_self",
       rel: "noopener noreferrer",
+      id: 1,
     },
     {
       title: <HugeiconsIcon icon={NewTwitterIcon} />,
       href: "https://x.com/Dhruvin_patel_7",
       target: "_blank",
       rel: "noopener noreferrer",
+      id: 2,
     },
     {
       title: <HugeiconsIcon icon={GithubIcon} />,
       href: "https://github.com/Dhruvin2101",
       target: "_blank",
       rel: "noopener noreferrer",
+      id: 3,
     },
     {
       title: <HugeiconsIcon icon={Linkedin02Icon} />,
       href: "https://www.linkedin.com/in/dhruvin-patel-08a1a3244/",
       target: "_blank",
       rel: "noopener noreferrer",
+      id: 4,
     },
     {
       title: <HugeiconsIcon icon={Mail01Icon} />,
       href: "mailto:dhruvinpatel746@gmail.com",
       target: "_blank",
       rel: "noopener noreferrer",
+      id: 5,
     },
   ];
   return (
@@ -122,7 +127,7 @@ const BottomDeck = () => {
       {links.map((items) => (
         <a
           href={items.href}
-          key={items.title}
+          key={items.id}
           target={items.target}
           rel={items.rel}
           className="text-neutral-500 hover:text-neutral-700 transition-all ease-in-out delay-100 hover:-translate-y-0.5"

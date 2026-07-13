@@ -9,6 +9,10 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Card from "./Card";
+import ExperienceCard from "./ExperienceCard";
+import Tooltip from "@mui/material/Tooltip";
+import TechStack from "./TechStack";
+import Footer from "./Footer";
 
 const words = ["Full Stack Developer", "Illustrator", "Open to Work"];
 const Page = () => {
@@ -49,6 +53,7 @@ const Page = () => {
       target: "_self",
       rel: "noopener noreferrer",
       id: 1,
+      name: "Home",
     },
     {
       title: (
@@ -58,6 +63,7 @@ const Page = () => {
       target: "_blank",
       rel: "noopener noreferrer",
       id: 2,
+      name: "X",
     },
     {
       title: <HugeiconsIcon icon={GithubIcon} className="h-[20px] w-[20px]" />,
@@ -65,6 +71,7 @@ const Page = () => {
       target: "_blank",
       rel: "noopener noreferrer",
       id: 3,
+      name: "Github",
     },
     {
       title: (
@@ -74,6 +81,7 @@ const Page = () => {
       target: "_blank",
       rel: "noopener noreferrer",
       id: 4,
+      name: "LinkedIn",
     },
     {
       title: <HugeiconsIcon icon={Mail01Icon} className="h-[20px] w-[20px] " />,
@@ -81,6 +89,7 @@ const Page = () => {
       target: "_blank",
       rel: "noopener noreferrer",
       id: 5,
+      name: "Mail",
     },
   ];
 
@@ -127,15 +136,17 @@ const Page = () => {
           </a>
           <div className="flex items-center gap-2 md:gap-4">
             {links.map((items) => (
-              <a
-                href={items.href}
-                key={items.id}
-                target={items.target}
-                rel={items.rel}
-                className="border border-neutral-300 rounded-lg p-[5px] shadow-xs text-neutral-500 hover:text-neutral-700 transition-all ease-in-out delay-70"
-              >
-                {items.title}
-              </a>
+              <Tooltip describeChild title={items.name} placement="top">
+                <a
+                  href={items.href}
+                  key={items.id}
+                  target={items.target}
+                  rel={items.rel}
+                  className="border border-neutral-300 rounded-lg p-[5px] shadow-xs text-neutral-500 hover:text-neutral-700 transition-all ease-in-out delay-70"
+                >
+                  {items.title}
+                </a>
+              </Tooltip>
             ))}
           </div>
         </div>
@@ -151,37 +162,115 @@ const Page = () => {
         web applications. I enjoy building real-world projects with modern
         technologies and a growing interest in{" "}
         <span className="bg-accent text-white border-2 border-accent rounded-sm  px-0.5 mx-0.5">
-          AI, developer tools, and product
+          AI, developer tools and product
         </span>{" "}
         engineering. I'm constantly learning, experimenting, and building
         projects that combine great user experience with solid engineering.
       </p>
       {/* -------------------------------------------------------- */}
-      {/* -------------------------------------------------------- */}
-      <div className="my-4 mx-4 md:mx-6 md:mt-6 p-2 md:p-3 border border-neutral-200 rounded-xl">
+
+      {/* ---------------------Projects--------------------------- */}
+      <div className="my-4 mx-4 md:mx-6 md:mt-6 md:mb-6 p-2 md:p-3 border border-neutral-200 rounded-xl bg-[repeating-linear-gradient(315deg,theme(colors.neutral.100)_0,theme(colors.neutral.200)_1px,transparent_1px,transparent_50%)] bg-[length:12px_12px] selection:bg-accent selection:text-white">
         <h4 className="text-[1.1rem] text-heading md:text-xl font-semibold pt-2 md:px-3 mx-4">
           Projects.
         </h4>
-        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-2xl p-2.5 md:p-4 ">
+        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-neutral-100">
           <Card
-            projectTitle="My Tube"
+            projectTitle="MyTube"
             projectDesc="MyTube is a backend-only REST API modelled on YouTube's core features. It handles user registration and login with bcrypt + JWT, video and thumbnail uploads to Cloudinary through Multer"
             livePreview="#"
             githubRep="https://github.com/Dhruvin2101/MyTube"
             techStack={["JavaScript", "Node.js", "MongoDB", "Express", "JWT"]}
             banner="/Card-1.svg"
+            isLive={false}
           />
         </div>
-        <div className="border border-neutral-300 mt-3 mb-4 mx-4 md:mx-7 rounded-2xl p-2.5 md:p-4">
+        <div className="border border-neutral-300 mt-3 mb-4 mx-4 md:mx-7 rounded-lg p-2.5 md:p-4 bg-neutral-100">
           <Card
-            projectTitle="My Tube"
-            projectDesc="MyTube is a backend-only REST API modelled on YouTube's core features. It handles user registration and login with bcrypt + JWT, video and thumbnail uploads to Cloudinary through Multer"
+            projectTitle="Portfolio"
+            projectDesc="A handcrafted developer portfolio built to showcase my projects, experience, skills, and design philosophy through smooth interactions, responsive layouts, and minimal user experience."
             livePreview="#"
-            githubRep="https://github.com/Dhruvin2101/MyTube"
-            techStack={["JavaScript", "Node.js", "MongoDB", "Express", "JWT"]}
+            githubRep="https://github.com/Dhruvin2101/portfolio"
+            techStack={["React JS", "Tailwind CSS", "Motion"]}
+            isLive={true}
+            banner="/Card-1.svg"
+          />
+        </div>
+        <div className="border border-neutral-300 mt-3 mb-4 mx-4 md:mx-7 rounded-lg p-2.5 md:p-4 bg-neutral-100">
+          <Card
+            projectTitle="DeckrAI"
+            projectDesc="Deckr AI is a modern full-stack AI presentation generation platform that transforms prompts into visually stunning presentations using AI."
+            livePreview="#"
+            githubRep="https://github.com/Dhruvin2101/deckr-AI-presentaion-generator"
+            techStack={[
+              "React JS",
+              "TypeScript",
+              "TanStack Start",
+              "TanStack Router",
+              "PostgreSQL",
+              "Prisma ORM",
+            ]}
+            isLive={true}
+            banner="/Card-1.svg"
           />
         </div>
       </div>
+
+      {/* ---------------------Experience--------------------------- */}
+      <div className="my-4 mx-4 md:mx-6 md:mt-6 md:mb-6 p-2 md:p-3 border border-neutral-200 rounded-xl bg-[repeating-linear-gradient(315deg,theme(colors.neutral.100)_0,theme(colors.neutral.200)_1px,transparent_1px,transparent_50%)] bg-[length:12px_12px] selection:bg-accent selection:text-white">
+        <h4 className="text-[1.1rem] text-heading md:text-xl font-semibold pt-2 md:px-3 mx-4">
+          Work experience.
+        </h4>
+        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-neutral-100">
+          <ExperienceCard
+            c_logo="/ToshalLogo.png"
+            company="Toshal Infotech  "
+            duration="June'26 - Current"
+            field="Flutter Intern"
+            desc="Assisted in building and enhancing production-ready applications through feature development, API integration, debugging, and code optimization while following industry best practices."
+            c_link="https://www.toshalinfotech.com/"
+          />
+        </div>
+        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-neutral-100">
+          <ExperienceCard
+            c_logo="/tatvasoft.png"
+            company="Tatvasoft"
+            duration="May'25 - June'25"
+            field=".NET & Angular Intern"
+            desc="Developed a CI platform application using Angular(TypeScript) and C# .NET, handling feature development, component building, and API integration across a full-stack codebase."
+            c_link="https://www.tatvasoft.com/"
+          />
+        </div>
+      </div>
+
+      {/* ---------------------Tech Stack---------------------------*/}
+      <div className="my-4 mx-4 md:mx-6 md:mt-6 md:mb-6 p-2 md:p-3 border border-neutral-200 rounded-xl bg-[repeating-linear-gradient(315deg,theme(colors.neutral.100)_0,theme(colors.neutral.200)_1px,transparent_1px,transparent_50%)] bg-[length:12px_12px] selection:bg-accent selection:text-white">
+        <h4 className="text-[1.1rem] text-heading md:text-xl font-semibold pt-2 md:px-3 mx-4">
+          Tech Stack.
+        </h4>
+        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-neutral-100">
+          <TechStack />
+        </div>
+      </div>
+
+      {/* ---------------------FOOTER--------------------------*/}
+      <div className="my-4 mx-4 md:mx-6 md:mt-6 md:mb-6 p-2 md:p-3 border border-neutral-200 rounded-xl bg-[repeating-linear-gradient(315deg,theme(colors.neutral.100)_0,theme(colors.neutral.200)_1px,transparent_1px,transparent_50%)] bg-[length:12px_12px] selection:bg-accent selection:text-white">
+        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-neutral-100">
+          <Footer />
+        </div>
+      </div>
+
+      {/* <div className="my-4 mx-4 md:mx-6 md:mt-6 md:mb-6 p-2 md:p-3 border border-neutral-200 rounded-xl bg-[repeating-linear-gradient(315deg,theme(colors.neutral.100)_0,theme(colors.neutral.200)_1px,transparent_1px,transparent_50%)] bg-[length:12px_12px] selection:bg-accent selection:text-white">
+        <h4 className="text-[1.1rem] text-heading md:text-xl font-semibold pt-2 md:px-3 mx-4">
+          Github Contribution.
+        </h4>
+        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-neutral-100">
+          <img
+            src="https://ghchart.rshah.org/b65e3c/Dhruvin2101"
+            alt="2016rshah's Blue Github Chart"
+          />
+        </div>
+      </div> */}
     </div>
   );
 };
