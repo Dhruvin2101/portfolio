@@ -18,37 +18,41 @@ const Card = ({
         <img src={banner} className="rounded-xl mb-2 w-full lg:max-w-70" />
         <div className="flex flex-col m-1 lg:m-4">
           <div className="flex items-center justify-between mb-2.5 md:mb-2">
-            <h5 className="text-phone md:text-xl text-subheading font-semibold">
+            <h5 className="text-phone md:text-xl text-[var(--text-title)] font-semibold">
               {projectTitle}
             </h5>
             <div className="flex items-start  gap-5 ">
               {isLive && (
-                <Tooltip describeChild title="Visit" placement="top">
-                  <Squeeze iterationDelay="2.2s">
+                <Squeeze iterationDelay="2.2s">
+                  <Tooltip describeChild title="Live Preview" placement="top">
                     <a href={livePreview}>
                       <HugeiconsIcon
                         icon={ExternalLinkIcon}
                         target="_blank"
-                        className="text-neutral-400 hover:text-neutral-600 transition-all ease-in-out delay-50 h-5 w-5"
+                        className="text-[var(--link)] hover:text-[var(--link-hover)] transition-all ease-in-out delay-50 h-5 w-5"
                       />
                     </a>
-                  </Squeeze>
-                </Tooltip>
+                  </Tooltip>
+                </Squeeze>
               )}
-              <Tooltip describeChild title="Github Repository" placement="top">
-                <Squeeze iterationDelay="2.2s">
+              <Squeeze iterationDelay="2.2s">
+                <Tooltip
+                  describeChild
+                  title="Github Repository"
+                  placement="top"
+                >
                   <a href={githubRep}>
                     <HugeiconsIcon
                       icon={GithubIcon}
                       target="_blank"
-                      className="text-neutral-400 hover:text-neutral-600 transition-all ease-in-out delay-50 h-5 w-5"
+                      className="text-[var(--link)] hover:text-[var(--link-hover)] transition-all ease-in-out delay-50 h-5 w-5"
                     />
                   </a>
-                </Squeeze>
-              </Tooltip>
+                </Tooltip>
+              </Squeeze>
             </div>
           </div>
-          <p className="text-body text-phone md:text-[1rem] tracking-tight lg:mb-3">
+          <p className="text-[var(--text-body)] text-phone md:text-[1rem] tracking-tight lg:mb-3">
             {projectDesc}
           </p>
         </div>
@@ -57,7 +61,7 @@ const Card = ({
         {techStack.map((tech) => (
           <span
             key={tech}
-            className="text-[14px] md:text-phone-small px-3 py-0.5 rounded-lg bg-neutral-200 text-subheading"
+            className="text-[14px] md:text-phone-small px-3 py-0.5 rounded-lg bg-[var(--pill-bg)] text-[var(--pill-txt)]"
           >
             {tech}
           </span>
@@ -68,4 +72,3 @@ const Card = ({
 };
 
 export default Card;
-

@@ -62,10 +62,10 @@ const TechStack = () => {
   return (
     <ul className="w-full flex flex-wrap gap-1.5 lg:gap-2.5">
       {techStack.map((items) => (
-        <li className="text-[0.95rem] lg:text-base px-2 py-0.5 rounded-lg bg-neutral-200 text-subheading shadow-sm border border-neutral-300">
+        <li className="text-[0.95rem] lg:text-base px-2 py-0.5 rounded-lg bg-[var(--pill-bg)] shadow-sm border border-[var(--border)]">
           <a
             href={items.site}
-            className="flex gap-1.5 items-center text-neutral-500 hover:text-neutral-700 transition-all ease-in-out delay-40"
+            className="flex gap-1.5 items-center text-[var(--link)] hover:text-[var(--link-hover)] transition-all ease-in-out delay-50"
             target="_blank"
           >
             <img

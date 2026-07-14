@@ -7,7 +7,7 @@ export const BackgroundLines = ({ children, className, svgOptions }) => {
   return (
     <div
       className={cn(
-        "relative overflow-hidden h-[15rem] md:h-screen w-full bg-neutral-100",
+        "relative overflow-hidden h-[15rem] md:h-screen w-full bg-[var(--card-bg)]",
         className,
       )}
     >

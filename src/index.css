@@ -2,23 +2,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap");
 @import "react-subtle-nudge/dist/index.css";
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 @import "tw-animate-css";
-
 @import "shadcn/tailwind.css";
-
 @import "@fontsource-variable/geist";
 
 @theme {
   --font-geist: "Geist", sans-serif;
   --font-timer: "Bitcount Prop Single", sans-serif;
-  --color-accent: #b65e3c;
   --color-name: oklch(20.5% 0 0);
   --color-heading: oklch(20.5% 0 0);
   --color-subheading: oklch(26.9% 0 0);
   --color-body: oklch(55.6% 0 0);
   --text-phone: 1 rem;
   --text-phone-small: 0.9rem;
+}
+
+:root {
+  --bg-main: oklch(98.5% 0 0);
+  --card-bg: oklch(97% 0 0);
+
+  --accent: #b65e3c;
+  --accent-bg: #ffffff;
+
+  --text-darkest: oklch(26.9% 0 0);
+  --text-subheading: oklch(20.5% 0 0);
+  --text-title: oklch(26.9% 0 0);
+  --text-body: oklch(43.9% 0 0);
+
+  --pill-txt: oklch(26.9% 0 0);
+  --pill-bg: oklch(92.2% 0 0);
+
+  --link: oklch(55.6% 0 0);
+  --link-hover: oklch(37.1% 0 0);
+
+  --deck-bg: #ffffff;
+
+  --border: oklch(92.2% 0 0);
+  --border-dark: oklch(87% 0 0);
+}
+
+.dark {
+  --bg-main: oklch(20.5% 0 0);
+  --card-bg: oklch(21.9% 0 0);
+
+  --accent: #b65e3c;
+  --accent-bg: #ffffff;
+
+  --text-darkest: oklch(98.9% 0 0);
+  --text-subheading: oklch(91.5% 0 0);
+  --text-title: oklch(82.9% 0 0);
+  --text-body: oklch(67.9% 0 0);
+
+  --pill-txt: oklch(76.9% 0 0);
+  --pill-bg: oklch(32.2% 0 0);
+
+  --link: oklch(65.6% 0 0);
+  --link-hover: oklch(85.452% 0.0001 271.152);
+
+  --deck-bg: oklch(20.5% 0 0);
+
+  --border: oklch(27.1% 0 0);
+  --border-dark: oklch(24.9% 0 0);
 }
 
 @layer utilities {

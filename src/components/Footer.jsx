@@ -11,10 +11,10 @@ const Footer = () => {
           opacity: 0.5,
         }}
       >
-        <h2 className="bg-clip-text text-transparent text-center bg-linear-to-b from-neutral-300 to-neutral-900  text-3xl md:text-4xl lg:text-7xl font-sans sm:mt-3 lg:mt-0 py-2 md:py-3 relative z-20 font-bold tracking-tight">
+        <h2 className="bg-clip-text text-transparent text-center bg-linear-to-b from-neutral-300 dark:from-neutral-600 to-neutral-900 dark:to-neutral-100  text-3xl md:text-4xl lg:text-7xl font-sans sm:mt-3 lg:mt-0 py-2 md:py-3 relative z-20 font-bold tracking-tight">
           Dhruvin Patel
         </h2>
-        <p className="max-w-xl mx-auto text-[15px] lg:px-10 tracking-tighter lg:tracking-tight md:text-sm text-neutral-500 text-center z-20 leading-4.5 md:leading-5 lg:leading-normal  ">
+        <p className="max-w-xl mx-auto text-[15px] tracking-tighter lg:tracking-tight md:text-sm lg:text-base text-[var(--text-body)] text-center z-20 leading-4.5 md:leading-5 lg:leading-normal  ">
           Passionate about building clean, scalable digital experiences.
           <span className="hidden lg:block">
             {" "}
@@ -23,7 +23,7 @@ const Footer = () => {
           </span>
         </p>
         <a
-          className="bg-neutral-500 text-white text-[14px] font-semibold rounded-lg px-2 py-0.5 mt-2.5 hover:bg-neutral-700 transition-all ease-in-out delay-75 z-20"
+          className="bg-[var(--link)] dark:bg-neutral-600 text-white text-[14px] font-semibold rounded-lg px-2 py-0.5 lg:px-3 lg:py-1 mt-4 hover:bg-[var(--link-hover)] dark:hover:bg-neutral-700 border-[var(--border-dark)] transition-all ease-in-out delay-75 z-20"
           href="https://mail.google.com/mail/?view=cm&fs=1&to=dhruvinpatel746@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
