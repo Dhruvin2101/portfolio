@@ -7,7 +7,7 @@ export const BackgroundLines = ({ children, className, svgOptions }) => {
   return (
     <div
       className={cn(
-        "relative overflow-hidden h-[20rem] md:h-screen w-full dark:bg-black",
+        "relative overflow-hidden h-[15rem] md:h-screen w-full bg-neutral-100",
         className,
       )}
     >
@@ -106,13 +106,14 @@ const SVG = ({ svgOptions }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="absolute inset-0 w-full h-full"
+      // className="absolute inset-0 w-full h-full"
+      className="absolute inset-0 w-full h-full scale-[1.7] md:scale-[1.3] lg:scale-100"
     >
       {paths.map((path, idx) => (
         <motion.path
           d={path}
           stroke={colors[idx]}
-          strokeWidth="2.3"
+          strokeWidth="3.3"
           strokeLinecap="round"
           variants={pathVariants}
           initial="initial"

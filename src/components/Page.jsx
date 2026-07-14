@@ -85,7 +85,7 @@ const Page = () => {
     },
     {
       title: <HugeiconsIcon icon={Mail01Icon} className="h-[20px] w-[20px] " />,
-      href: "mailto:dhruvinpatel746@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=dhruvinpatel746@gmail.com",
       target: "_blank",
       rel: "noopener noreferrer",
       id: 5,
@@ -255,7 +255,7 @@ const Page = () => {
 
       {/* ---------------------FOOTER--------------------------*/}
       <div className="my-4 mx-4 md:mx-6 md:mt-6 md:mb-6 p-2 md:p-3 border border-neutral-200 rounded-xl bg-[repeating-linear-gradient(315deg,theme(colors.neutral.100)_0,theme(colors.neutral.200)_1px,transparent_1px,transparent_50%)] bg-[length:12px_12px] selection:bg-accent selection:text-white">
-        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-neutral-100">
+        <div className="border border-neutral-300 mt-3 mb-5 mx-4 md:mx-7 rounded-xl px-2.5 md:px-4 bg-neutral-100">
           <Footer />
         </div>
       </div>

@@ -28,6 +28,7 @@ function App({ children }) {
   return (
     <>
       <div className="w-full font-giest py-7 min-h-80 bg-neutral-50 min-h-screen  bg-[radial-gradient(circle,#ccc8be_1px,transparent_1px)] bg-[length:22px_22px]">
+        <BgBlur />
         <Navbar />
         {children}
         <BottomDeck />
@@ -116,14 +117,14 @@ const BottomDeck = () => {
     },
     {
       title: <HugeiconsIcon icon={Mail01Icon} />,
-      href: "mailto:dhruvinpatel746@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=dhruvinpatel746@gmail.com",
       target: "_blank",
       rel: "noopener noreferrer",
       id: 5,
     },
   ];
   return (
-    <div className="bg-white border border-neutral-200 shadow-md rounded-xl flex justify-around items-center mx-auto fixed inset-x-0  bottom-10  max-w-2xs md:max-w-xs  text-neutral-700 h-12">
+    <div className="bg-white z-505 border border-neutral-200 shadow-md rounded-xl flex justify-around items-center mx-auto fixed inset-x-0  bottom-10  max-w-2xs md:max-w-xs  text-neutral-700 h-12">
       {links.map((items) => (
         <a
           href={items.href}
@@ -139,4 +140,11 @@ const BottomDeck = () => {
   );
 };
 
+const BgBlur = () => {
+  return (
+    <div className="flex justify-center">
+      <p className="z-500 bg-linear-to-t from-white/90 to-transparent backdrop-blur-[2px] pointer-events-none h-12 w-xs md:w-md lg:w-3xl mx-auto fixed bottom-0"></p>
+    </div>
+  );
+};
 export default App;

@@ -1,4 +1,3 @@
-import React from "react";
 import { BackgroundLines } from "./ui/background-lines";
 
 const Footer = () => {
@@ -12,15 +11,23 @@ const Footer = () => {
           opacity: 0.5,
         }}
       >
-        <h2 className="bg-clip-text text-transparent text-center bg-linear-to-b from-neutral-300 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
+        <h2 className="bg-clip-text text-transparent text-center bg-linear-to-b from-neutral-300 to-neutral-900  text-3xl md:text-4xl lg:text-7xl font-sans sm:mt-3 lg:mt-0 py-2 md:py-3 relative z-20 font-bold tracking-tight">
           Dhruvin Patel
         </h2>
-        <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
-          I'm always interested in new opportunities and exciting projects.
-          Whether you have a project in mind or just want to chat about tech,
-          I'd love to hear from you.
+        <p className="max-w-xl mx-auto text-[15px] lg:px-10 tracking-tighter lg:tracking-tight md:text-sm text-neutral-500 text-center z-20 leading-4.5 md:leading-5 lg:leading-normal  ">
+          Passionate about building clean, scalable digital experiences.
+          <span className="hidden lg:block">
+            {" "}
+            Always open to exciting opportunities, collaborations and meaningful
+            conversations.
+          </span>
         </p>
-        <a className="bg-neutral-100 rounded-lg px-2 py-0.5 mt-1">
+        <a
+          className="bg-neutral-500 text-white text-[14px] font-semibold rounded-lg px-2 py-0.5 mt-2.5 hover:bg-neutral-700 transition-all ease-in-out delay-75 z-20"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=dhruvinpatel746@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Get in Touch
         </a>
       </BackgroundLines>

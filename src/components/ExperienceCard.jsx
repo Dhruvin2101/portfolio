@@ -1,6 +1,7 @@
 import { ExternalLinkIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Tooltip from "@mui/material/Tooltip";
+import { Squeeze } from "react-subtle-nudge";
 
 const ExperienceCard = ({ c_logo, company, field, duration, desc, c_link }) => {
   return (
@@ -15,12 +16,14 @@ const ExperienceCard = ({ c_logo, company, field, duration, desc, c_link }) => {
             {company}
           </h3>
           <Tooltip describeChild title="Visit Company's site" placement="top">
-            <a href={c_link} className="hidden lg:block">
-              <HugeiconsIcon
-                icon={ExternalLinkIcon}
-                className="text-neutral-400 hover:text-neutral-600 transition-all ease-in-out delay-50 h-5 w-5"
-              />
-            </a>
+            <Squeeze iterationDelay="2.2s">
+              <a href={c_link} className="hidden lg:block">
+                <HugeiconsIcon
+                  icon={ExternalLinkIcon}
+                  className="text-neutral-400 hover:text-neutral-600 transition-all ease-in-out delay-50 h-5 w-5"
+                />
+              </a>
+            </Squeeze>
           </Tooltip>
         </div>
         <h6 className="text-[15px] text-neutral-700 mb-0.5">
