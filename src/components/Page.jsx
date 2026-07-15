@@ -112,7 +112,7 @@ const Page = () => {
         </p>
         <div className="w-full mt-4 flex items-center gap-4 md:gap-5">
           <img
-            src="/profile.png"
+            src="/profile.svg"
             className="rounded-full border-2 border-[var(--border)] shadow-md h-[125px] w-[125px] selection:bg-accent"
           />
           <h1 className="text-[var(--text-subheading)] font-medium tracking-tight text-3xl max-w-xl md:max-w-4xl md:text-5xl">

@@ -43,8 +43,8 @@
 }
 
 .dark {
-  --bg-main: oklch(20.5% 0 0);
-  --card-bg: oklch(21.9% 0 0);
+  --bg-main: oklch(18.5% 0 0);
+  --card-bg: oklch(19.5% 0 0);
 
   --accent: #b65e3c;
   --accent-bg: #ffffff;
@@ -55,7 +55,7 @@
   --text-body: oklch(67.9% 0 0);
 
   --pill-txt: oklch(76.9% 0 0);
-  --pill-bg: oklch(32.2% 0 0);
+  --pill-bg: oklch(24.2% 0 0);
 
   --link: oklch(65.6% 0 0);
   --link-hover: oklch(85.452% 0.0001 271.152);
