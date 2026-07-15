@@ -95,7 +95,7 @@ const Navbar = () => {
           {formattedTime}
         </p>
         <p>
-          <button onClick={toggleTheme} className="pb-[15px]">
+          <button onClick={toggleTheme} className="pb-[18px]">
             <div className="flex relative items-center justify-center">
               <HugeiconsIcon
                 icon={Sun03Icon}

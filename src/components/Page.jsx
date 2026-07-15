@@ -168,18 +168,18 @@ const Page = () => {
       {/* -------------------------------------------------------- */}
 
       {/* ---------------------Projects--------------------------- */}
-      <div className="my-4 mx-4 md:mx-6 md:mt-6 md:mb-6 p-2 md:p-3 border border-[var(--border)] rounded-xl bg-[repeating-linear-gradient(315deg,theme(colors.neutral.200)_0,theme(colors.neutral.100)_1px,transparent_1px,transparent_50%)] dark:bg-[repeating-linear-gradient(315deg,theme(colors.neutral.800)_0,theme(colors.neutral.900)_1px,transparent_1px,transparent_50%)] bg-[length:12px_12px]">
+      <div className="my-4 mx-4 md:mx-6 md:mt-6 md:mb-6 p-2 md:p-3  border border-[var(--border)] rounded-xl bg-[repeating-linear-gradient(315deg,theme(colors.neutral.200)_0,theme(colors.neutral.100)_1px,transparent_1px,transparent_50%)] dark:bg-[repeating-linear-gradient(315deg,theme(colors.neutral.800)_0,theme(colors.neutral.900)_1px,transparent_1px,transparent_50%)] bg-[length:12px_12px]">
         <h4 className="text-[1.1rem] text-[var(--text-subheading)] md:text-xl font-semibold pt-2 md:px-3 mx-4">
           Projects.
         </h4>
         <div className="border border-[var(--border-dark)] mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-[var(--card-bg)]">
           <Card
             projectTitle="MyTube"
-            projectDesc="MyTube is a backend-only REST API modelled on YouTube's core features. It handles user registration and login with bcrypt + JWT, video and thumbnail uploads to Cloudinary through Multer"
+            projectDesc="MyTube is a backend only REST API modelled on YouTube's core features. It handles user registration and login with bcrypt + JWT, video and thumbnail uploads to Cloudinary through Multer"
             livePreview="#"
             githubRep="https://github.com/Dhruvin2101/MyTube"
             techStack={["JavaScript", "Node.js", "MongoDB", "Express", "JWT"]}
-            banner="/Card-1.svg"
+            banner="/myTube.svg"
             isLive={false}
           />
         </div>
@@ -191,25 +191,25 @@ const Page = () => {
             githubRep="https://github.com/Dhruvin2101/portfolio"
             techStack={["React JS", "Tailwind CSS", "Motion"]}
             isLive={true}
-            banner="/Card-1.svg"
+            banner="/portfolio.svg"
           />
         </div>
         <div className="border mt-3 mb-4 mx-4 md:mx-7 rounded-lg p-2.5 md:p-4 border-[var(--border-dark)] bg-[var(--card-bg)]">
           <Card
             projectTitle="DeckrAI"
             projectDesc="Deckr AI is a modern full-stack AI presentation generation platform that transforms prompts into visually stunning presentations using AI."
-            livePreview="#"
+            livePreview="https://deckr-ai.vercel.app"
             githubRep="https://github.com/Dhruvin2101/deckr-AI-presentaion-generator"
             techStack={[
               "React JS",
               "TypeScript",
               "TanStack Start",
               "TanStack Router",
-              "PostgreSQL",
+              "Inngest",
               "Prisma ORM",
             ]}
             isLive={true}
-            banner="/Card-1.svg"
+            banner="/deckr-ai.svg"
           />
         </div>
       </div>

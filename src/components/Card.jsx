@@ -15,7 +15,10 @@ const Card = ({
   return (
     <div className="w-full mb-2 z-50">
       <div className="flex flex-col lg:flex-row  lg:justify-between lg:items-center justify-center items-center ">
-        <img src={banner} className="rounded-xl mb-2 w-full lg:max-w-70" />
+        <img
+          src={banner}
+          className="rounded-xl mb-2 w-full lg:max-w-70 dark:invert-0 invert-75"
+        />
         <div className="flex flex-col m-1 lg:m-4">
           <div className="flex items-center justify-between mb-2.5 md:mb-2">
             <h5 className="text-phone md:text-xl text-[var(--text-title)] font-semibold">
