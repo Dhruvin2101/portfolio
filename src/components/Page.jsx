@@ -13,6 +13,7 @@ import ExperienceCard from "./ExperienceCard";
 import Tooltip from "@mui/material/Tooltip";
 import TechStack from "./TechStack";
 import Footer from "./Footer";
+import { motion } from "motion/react";
 
 const words = ["Full Stack Developer", "Illustrator", "Open to Work"];
 const Page = () => {
@@ -113,6 +114,7 @@ const Page = () => {
         <div className="w-full mt-4 flex items-center gap-4 md:gap-5">
           <img
             src="/profile.svg"
+            loading="lazy"
             className="rounded-full border-2 border-[var(--border)] shadow-md h-[125px] w-[125px] selection:bg-accent"
           />
           <h1 className="text-[var(--text-subheading)] font-medium tracking-tight text-3xl max-w-xl md:max-w-4xl md:text-5xl">
@@ -125,13 +127,25 @@ const Page = () => {
         </h5>
         {/* -------------------------------------------------------- */}
         <div className="mt-3 flex items-center gap-2 md:gap-4 mb-2">
-          <a
-            className="text-phone-small md:text-normal cursor-pointer py-1 px-2 md:py-1 md:px-3 bg-neutral-800 dark:bg-neutral-300 dark:text-neutral-900 text-white rounded-lg"
+          <motion.a
+            whileHover={{
+              rotateX: 25,
+              rotateY: 10,
+              boxShadow: "0px 5px 20px rgba(182, 94, 60, 0.5)",
+              y: 2,
+            }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            className="group text-phone-small md:text-normal cursor-pointer py-1 px-2 md:py-1 md:px-3 bg-neutral-800 dark:bg-neutral-300 dark:text-neutral-900 text-white rounded-lg"
             href="https://drive.google.com/file/d/1qszk97M-95b0C6a5gsNKr8fcIBbDriXh/view?usp=drive_link"
             target="_blank"
           >
-            Resume
-          </a>
+            <span className="dark:group-hover:text-[var(--accent)]">
+              Resume
+            </span>
+          </motion.a>
           <div className="flex items-center gap-2 md:gap-4 ">
             {links.map((items) => (
               <Tooltip describeChild title={items.name} placement="top">

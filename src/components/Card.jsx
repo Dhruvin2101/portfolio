@@ -17,6 +17,7 @@ const Card = ({
       <div className="flex flex-col lg:flex-row  lg:justify-between lg:items-center justify-center items-center ">
         <img
           src={banner}
+          loading="lazy"
           className="rounded-xl mb-2 w-full lg:max-w-70 dark:invert-0 invert-75"
         />
         <div className="flex flex-col m-1 lg:m-4">

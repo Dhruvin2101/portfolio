@@ -71,6 +71,7 @@ const TechStack = () => {
             <img
               src={items.logo}
               alt={items.name}
+              loading="lazy"
               className="h-4 w-4 lg:h-5 lg:w-5 rounded-sm"
             />
             <p>{items.name}</p>

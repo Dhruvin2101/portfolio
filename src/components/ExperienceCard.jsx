@@ -8,6 +8,7 @@ const ExperienceCard = ({ c_logo, company, field, duration, desc, c_link }) => {
     <div className="flex gap-3 md:gap-6 items-start w-full mb-2">
       <img
         src={c_logo}
+        loading="lazy"
         className="rounded-full h-8 w-8 md:h-12 md:w-12 border border-[var(--border-dark)] object-fill object-center"
       />
       <div className="flex flex-col gap-1 md:gap-0.5 items-start w-full ">
