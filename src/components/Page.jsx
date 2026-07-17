@@ -129,7 +129,7 @@ const Page = () => {
         <div className="mt-3 flex items-center gap-2 md:gap-4 mb-2">
           <motion.a
             whileHover={{
-              rotateX: 25,
+              rotateX: 10,
               rotateY: 10,
               boxShadow: "0px 5px 20px rgba(182, 94, 60, 0.5)",
               y: -3,
