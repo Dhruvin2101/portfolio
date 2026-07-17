@@ -13,7 +13,7 @@ import ExperienceCard from "./ExperienceCard";
 import Tooltip from "@mui/material/Tooltip";
 import TechStack from "./TechStack";
 import Footer from "./Footer";
-import { motion } from "motion/react";
+import { easeInOut, motion } from "motion/react";
 
 const words = ["Full Stack Developer", "Illustrator", "Open to Work"];
 const Page = () => {
@@ -132,7 +132,7 @@ const Page = () => {
               rotateX: 25,
               rotateY: 10,
               boxShadow: "0px 5px 20px rgba(182, 94, 60, 0.5)",
-              y: 2,
+              y: -3,
             }}
             transition={{
               duration: 0.3,
@@ -186,7 +186,20 @@ const Page = () => {
         <h4 className="text-[1.1rem] text-[var(--text-subheading)] md:text-xl font-semibold pt-2 md:px-3 mx-4">
           Projects.
         </h4>
-        <div className="border border-[var(--border-dark)] mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-[var(--card-bg)]">
+        <motion.div
+          initial={{
+            filter: "blur(0.5px)",
+          }}
+          whileHover={{
+            scale: 1.03,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 0.2,
+            ease: "easeInOut",
+          }}
+          className="border border-[var(--border-dark)] mt-3 mb-5 mx-4 md:mx-7 rounded-xl p-2.5 md:p-4 bg-[var(--card-bg)]"
+        >
           <Card
             projectTitle="MyTube"
             projectDesc="MyTube is a backend only REST API modelled on YouTube's core features. It handles user registration and login with bcrypt + JWT, video and thumbnail uploads to Cloudinary through Multer"
@@ -196,8 +209,21 @@ const Page = () => {
             banner="/myTube.svg"
             isLive={false}
           />
-        </div>
-        <div className="border mt-3 mb-4 mx-4 md:mx-7 rounded-lg p-2.5 md:p-4 border-[var(--border-dark)] bg-[var(--card-bg)]">
+        </motion.div>
+        <motion.div
+          initial={{
+            filter: "blur(0.5px)",
+          }}
+          whileHover={{
+            scale: 1.03,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 0.2,
+            ease: "easeInOut",
+          }}
+          className="border mt-3 mb-4 mx-4 md:mx-7 rounded-lg p-2.5 md:p-4 border-[var(--border-dark)] bg-[var(--card-bg)]"
+        >
           <Card
             projectTitle="Portfolio"
             projectDesc="A handcrafted developer portfolio built to showcase my projects, experience, skills, and design philosophy through smooth interactions, responsive layouts, and minimal user experience."
@@ -207,8 +233,21 @@ const Page = () => {
             isLive={true}
             banner="/portfolio.svg"
           />
-        </div>
-        <div className="border mt-3 mb-4 mx-4 md:mx-7 rounded-lg p-2.5 md:p-4 border-[var(--border-dark)] bg-[var(--card-bg)]">
+        </motion.div>
+        <motion.div
+          initial={{
+            filter: "blur(0.5px)",
+          }}
+          whileHover={{
+            scale: 1.03,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 0.2,
+            ease: "easeInOut",
+          }}
+          className="border mt-3 mb-4 mx-4 md:mx-7 rounded-lg p-2.5 md:p-4 border-[var(--border-dark)] bg-[var(--card-bg)]"
+        >
           <Card
             projectTitle="DeckrAI"
             projectDesc="Deckr AI is a modern full-stack AI presentation generation platform that transforms prompts into visually stunning presentations using AI."
@@ -225,7 +264,7 @@ const Page = () => {
             isLive={true}
             banner="/deckr-ai.svg"
           />
-        </div>
+        </motion.div>
       </div>
 
       {/* ---------------------Experience--------------------------- */}
